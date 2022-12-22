@@ -1,5 +1,6 @@
 # Simple-Web-Server-and-Client
-Implementation of a simple web server and client using HTTP/1.1 protocol. 
+Implementation of a simple web server and client using HTTP/1.1 protocol. </br>
+(Part of MS Computer Science graduate coursework.) </br>
 
 ## Description ## 
 

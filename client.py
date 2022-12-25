@@ -81,15 +81,3 @@ if sys.argv[2] == "GET":
 elif sys.argv[2] == "HEAD":
     HEAD(sys.argv[1])  
 
-
-
-
-
-#python client.py http://www.taylortjohnson.com:80/test_cs5283.html GET
-#python client.py http://www.taylortjohnson.com:80/test_cs5283.html HEAD
-#python client.py http://www.taylortjohnson2.com HEAD
-#python client.py http://localhost:8080/test_cs5283.html GET
-#python client.py http://localhost:8083/helloHD2.html GET
-#python client.py http://www.taylortjohnson.com/test_cs5283_big.html GET
-#python client.py http://www.taylortjohnson.com/test_cs5283_big.html HEAD
-

@@ -1,23 +1,29 @@
-# Simple-Web-Server-and-Client
+# Simple Web Server and Client
 Implementation of a simple web server and client using HTTP/1.1 protocol. </br>
 (Part of MS Computer Science graduate coursework.) </br>
 
 ## Description ## 
 
-1. Two programs are provided - a web server and a web client.</br>
-2. Considerations:</br>
-    a. Cookies or other forms of state are not supported in these simple implementations.</br>
-    b. HTTP/1.1 protocol (not HTTP/1.0) is implemented.</br>
-    c. A Host header field is required.</br>
-3. Overview:</br>
-    a. client.py:</br>
-       - Implements a basic socket-based web client by connecting and sending HTTP protocol
-messages to a web server (no detailed GUI or user interface is included here).</br>
-       - The basic call for the program: </br>
-        ` python web_client.py host:port/path [METHOD]`
+This repository contains code for a basic socket-based web server and web client. The server listens on a specified port and serves static web pages from the specified directory. The client connects to the server and retrieves static web pages.
 
-    b. server.py:</br>
-       - Implements a basic socket-based web server by listening on a specified port.</br>
-       - The basic call for the web server will be: </br>
-        ` python web_server.py PORT DIRECTORY`
+## Installation and Usage ## 
 
+1. Clone this repository to your local machine. </br>
+2. Navigate to the root directory of the repository. </br>
+3. To start the server, run python web_server.py PORT DIRECTORY, where PORT is the port number on which you want to run the server and DIRECTORY is the directory containing the static web pages you want to serve. </br>
+4. To start the client, run python web_client.py host:port/path [METHOD], where host:port/path is the URL of the static web page you want to retrieve, and [METHOD] is optional and can be GET or HEAD. The default method is GET. </br>
+
+## Features ## 
+
+### Server ###
+*  The server supports GET and HEAD methods.
+*  The server returns appropriate HTTP error codes, such as 404 Not Found if the requested file does not exist.
+*  The server returns the following HTTP response headers: Date, Server (with the server's name), Content-Length (where appropriate), and Content-Type (for supported file types).
+*  The server serves the default file (index.html) when the root of the server is requested.
+*  The server can serve large files.
+
+### Client ###
+
+*  The client supports GET and HEAD methods.
+*  The client handles HTTP status codes appropriately.
+*  The client outputs the HTTP status, headers, and body of the retrieved static web page.
